@@ -466,22 +466,10 @@ letter-spacing: 0.03em;
 text-transform: uppercase;
 color: #FFFFFF;
 padding-bottom: 20px;
-
-
-
-}
-.footer-icon{
-  width: 20px;
-  height: 20px;
-  fill: currentColor;
 }
 .footer-second-iteam{
   margin-right: 10px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
   display: flex;
-
 }
 .footer-second-iteam:last-child{
   margin-right: 0;
@@ -493,9 +481,16 @@ padding-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffffff;
-  color: #afb1b8;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
+.footer-link-icon:hover,.footer-link-icon:focus{
+  background-color: #2196f3;
+}
+.footer-icon{
+  fill: currentColor;
+}
+
 /* Portfolio */
 .portfolio-btn {
   font-family: inherit;
