@@ -327,7 +327,7 @@ body {
 }
 .team-soc-link:hover {
   background-color: #2196f3;
-  color: #afb1b8;
+  color: #ffffff;
 }
 .link {
   text-decoration: none;
@@ -359,7 +359,6 @@ body {
   width: 106px;
   height: 60px;
   fill: currentColor;
-  
 }
 
 .clients-iteam {
@@ -375,7 +374,8 @@ body {
   color: #afb1b8;
   padding: 16px 32px;
 }
-.clients-link:hover,.clients-link:focus{
+.clients-link:hover,
+.clients-link:focus {
   color: #2196f3;
 }
 .clients-icon:hover {
@@ -402,7 +402,6 @@ body {
 }
 .footer-list {
   list-style-type: none;
-  
 }
 .footer-iteam {
   margin-bottom: 10px;
@@ -434,44 +433,42 @@ body {
   text-decoration: none;
   letter-spacing: 0.03em;
 }
-.footer-container{
+.footer-container {
   display: flex;
 }
-.footer-flex{
-  display:flex ;
- flex-direction: column;
- padding-right: 70px;
+.footer-flex {
+  display: flex;
+  flex-direction: column;
+  padding-right: 70px;
 }
 /* footer second title */
 .footer-second-title {
-padding-top: 0;
-padding-bottom: 0;
-width: 206px;
-height: 80px;
-
+  padding-top: 0;
+  padding-bottom: 0;
+  width: 206px;
+  height: 80px;
 }
 
-
 .footer-icon-list {
-  display:flex;
+  display: flex;
   list-style-type: none;
   justify-content: center;
 }
 .footer-text {
   padding-top: 12px;
   font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-letter-spacing: 0.03em;
-text-transform: uppercase;
-color: #FFFFFF;
-padding-bottom: 20px;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding-bottom: 20px;
 }
-.footer-second-iteam{
+.footer-second-iteam {
   margin-right: 10px;
   display: flex;
 }
-.footer-second-iteam:last-child{
+.footer-second-iteam:last-child {
   margin-right: 0;
 }
 .footer-link-icon {
@@ -484,10 +481,11 @@ padding-bottom: 20px;
   color: #ffffff;
   background-color: rgba(255, 255, 255, 0.1);
 }
-.footer-link-icon:hover,.footer-link-icon:focus{
+.footer-link-icon:hover,
+.footer-link-icon:focus {
   background-color: #2196f3;
 }
-.footer-icon{
+.footer-icon {
   fill: currentColor;
 }
 
@@ -540,6 +538,10 @@ padding-bottom: 20px;
 }
 .portfolio-item {
   width: 370px;
+}
+.portfolio-item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-head {
   font-weight: 700;
