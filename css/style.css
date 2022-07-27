@@ -65,6 +65,9 @@ body {
   margin-right: 50px;
   margin-left: 50px;
 }
+.nav-item:last-child {
+  margin-right: 0;
+}
 .nav-link {
   display: block;
   font-weight: 500;
@@ -92,8 +95,11 @@ body {
 .header-contacts {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 .header-mailto {
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -103,6 +109,8 @@ body {
   letter-spacing: 0.02em;
 }
 .header-tel {
+  display: flex;
+  align-items: center;
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
@@ -110,19 +118,33 @@ body {
   color: var(--second-text-color);
   text-decoration: none;
   letter-spacing: 0.02em;
-  margin-left: 50px;
 }
 .header-mail {
   list-style-type: none;
   display: flex;
   margin-left: auto;
 }
-.mail-icon{
-  display: inline-flex;
-  align-items: center;
+.mail-icon {
+  margin-right: 10px;
+  fill: currentColor;
+  padding: 0;
+  list-style-type: none;
+  width: 16px;
+  height: 12px;
 }
+.tellephone-icon {
+  margin-right: 10px;
+  fill: currentColor;
+  padding: 0;
+  list-style-type: none;
+  width: 12px;
+  height: 16px;
+}
+
 .header-tellephone {
   list-style-type: none;
+  margin-left: 50px;
+  display: flex;
 }
 
 /* Hero */
@@ -132,7 +154,11 @@ body {
   padding-top: 200px;
   padding-bottom: 200px;
   background: var(--background-hero-footer-color);
-  background-image: url(../img/hero-bg.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../img/hero-bg.jpg);
   max-width: 1600px;
   margin: auto;
 }
@@ -171,7 +197,6 @@ body {
 
 .main-text {
   padding-bottom: 0;
-  
 }
 .list {
   list-style-type: none;
@@ -184,16 +209,14 @@ body {
 .soft-skills:last-child {
   margin-right: 0;
 }
-.soft-icon{
+.soft-icon {
   background-color: var(--second-background-color);
   width: 270px;
   height: 120px;
-  display:flex;
+  display: flex;
   justify-content: center;
   padding: 25px 100px;
   margin-bottom: 30px;
-  
-  
 }
 .soft-caption {
   text-transform: uppercase;
@@ -251,12 +274,11 @@ body {
   color: var(--first-background-color);
   letter-spacing: 0.03em;
   margin-bottom: 10px;
-  
 }
 .team-name-text {
   padding-top: 30px;
   padding-bottom: 30px;
-  background-color:var(--thirst-text-color);
+  background-color: var(--thirst-text-color);
 }
 .team-list {
   list-style-type: none;
@@ -264,7 +286,6 @@ body {
   column-gap: 30px;
 }
 .team-iteam {
-  margin-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
@@ -278,47 +299,54 @@ body {
   margin-bottom: 16px;
 }
 /* ICONS */
-.team-soc{
+.team-soc {
   display: flex;
   justify-content: center;
   gap: 10px;
-  background-color:var(--thirst-text-color);
 }
-.team-soc-iteam{
+.team-soc-iteam {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color:#188ce8 ;
+  display: flex;
+}
+.team-soc-icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.team-soc-link {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
-  fill:#ffffff;
+  background-color: #ffffff;
+  color: #afb1b8;
 }
-.team-soc-link{
-  width: 206px;
-  height: 44px;
-  fill: currentColor;
+.team-soc-link:hover {
+  background-color: #2196f3;
+  color: #afb1b8;
 }
-.team-soc-link:hover{
-  background-color: tomato;
-  fill: teal;
-}
-.link{
+.link {
   text-decoration: none;
 }
-.list{
+.list {
   list-style: none;
 }
 
 /* Clients */
 .clients {
-  
 }
-.client-icon:hover{
-background-image:#2196F3 ;
-}
-.clients-caption{
+
+.clients-caption {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
   text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
   margin-bottom: 50px;
 }
 .clients-list {
@@ -327,14 +355,31 @@ background-image:#2196F3 ;
   column-gap: 30px;
   justify-content: center;
 }
-.clients-iteam {
-  border: 1px solid #AFB1B8;
-  border-radius: 4px;
-  padding: 16px 32px;
-
+.clients-icon {
+  width: 106px;
+  height: 60px;
+  fill: currentColor;
+  
 }
-.clients-links:hover{
-  background-image:color var(--first-text-color);
+
+.clients-iteam {
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.clients-iteam:hover,
+.clients-iteam:focus {
+  border: 1px solid #2196f3;
+}
+.clients-link {
+  display: flex;
+  color: #afb1b8;
+  padding: 16px 32px;
+}
+.clients-link:hover,.clients-link:focus{
+  color: #2196f3;
+}
+.clients-icon:hover {
+  color: #2196f3;
 }
 /* Footer */
 .footer {
@@ -357,9 +402,13 @@ background-image:#2196F3 ;
 }
 .footer-list {
   list-style-type: none;
+  
 }
 .footer-iteam {
   margin-bottom: 10px;
+}
+.footer-iteam:last-child {
+  margin-bottom: 0;
 }
 .map-link {
   font-style: normal;
@@ -384,6 +433,68 @@ background-image:#2196F3 ;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   letter-spacing: 0.03em;
+}
+.footer-container{
+  display: flex;
+}
+.footer-flex{
+  display:flex ;
+ flex-direction: column;
+ padding-right: 70px;
+}
+/* footer second title */
+.footer-second-title {
+padding-top: 0;
+padding-bottom: 0;
+width: 206px;
+height: 80px;
+
+}
+
+
+.footer-icon-list {
+  display:flex;
+  list-style-type: none;
+  justify-content: center;
+}
+.footer-text {
+  padding-top: 12px;
+  font-weight: 700;
+font-size: 14px;
+line-height: 1.14;
+letter-spacing: 0.03em;
+text-transform: uppercase;
+color: #FFFFFF;
+padding-bottom: 20px;
+
+
+
+}
+.footer-icon{
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+.footer-second-iteam{
+  margin-right: 10px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+
+}
+.footer-second-iteam:last-child{
+  margin-right: 0;
+}
+.footer-link-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  color: #afb1b8;
 }
 /* Portfolio */
 .portfolio-btn {
@@ -431,8 +542,6 @@ background-image:#2196F3 ;
   flex-wrap: wrap;
   justify-content: center;
   gap: 30px;
-  margin-top: 34px;
-  margin-bottom: 34px;
 }
 .portfolio-item {
   width: 370px;
